@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Deploy StaySpread",
+  "projectName": "StaySpread",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-25",
+      "text": "Deploy the StaySpread application to the Internet Computer network, including all previously generated features: host dashboard, promoter dashboard with tracking metrics and social sharing, listings browse and detail pages, Stripe Checkout integration, Internet Identity authentication, PWA capabilities (manifest, service worker, install button), Founding 50 Hosts landing page, and social sharing buttons on listing and promoter dashboard pages.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Deploy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The application deploys successfully to the Internet Computer without errors",
+        "The frontend canister serves the React application at the deployed URL",
+        "The backend canister is reachable and all API calls from the frontend resolve correctly",
+        "All existing routes are accessible in the deployed app"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any existing feature logic or UI — this is a deployment-only request",
+    "Do not alter immutable frontend paths"
+  ],
+  "nonGoals": [
+    "Adding new features",
+    "Changing any existing code logic, styling, or data models"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-deploy-the-stayspread-application-to-the-internet-computer-network-including-all-previously-generated-features-host-dashboard-promoter-dashboard-with-tracking-metrics-and-social-sharing-listings-browse-and-detail-pages-stripe-checkout-integration-internet-identity-authentication-pwa-capabilities-manifest-service-worker-install-button-founding-50-hosts-landing-page-and-social-sharing-buttons-on-listing-and-promoter-dashboard-pages",
+      "featureTitle": "Deploy the StaySpread application to the Internet Computer network, including all previously generated features: host dashboard, promoter dashboard with tracking metrics and social sharing, listings browse and detail pages, Stripe Checkout integration, Internet Identity authentication, PWA capabilities (manifest, service worker, install button), Founding 50 Hosts landing page, and social sharing buttons on listing and promoter dashboard pages.",
+      "files": [
+        "frontend/index.html",
+        "frontend/public/manifest.json",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "stripe@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

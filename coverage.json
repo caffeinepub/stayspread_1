@@ -1,0 +1,54 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T13:24:29.780Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-25",
+        "summary": "Deploy the StaySpread application to the Internet Computer network, including all previously generated features: host dashboard, promoter dashboard with tracking metrics and social sharing, listings browse and detail pages, Stripe Checkout integration, Internet Identity authentication, PWA capabilities (manifest, service worker, install button), Founding 50 Hosts landing page, and social sharing buttons on listing and promoter dashboard pages.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/manifest.json",
+          "frontend/src/main.tsx",
+          "frontend/index.html",
+          "frontend/src/hooks/useActor.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Header.tsx",
+          "frontend/src/utils/urlParams.ts",
+          "frontend/public/service-worker.js"
+        ],
+        "matchedFiles": [
+          "frontend/public/manifest.json",
+          "frontend/index.html",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/README.md",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/public/manifest.json",
+    "frontend/src/App.tsx",
+    "frontend/src/components/ListingCard.tsx",
+    "frontend/src/components/RootLayout.tsx",
+    "frontend/src/pages/ListingDetail.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

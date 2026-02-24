@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "StaySpread - A web-based affiliate marketplace MVP for short-term rental properties. Hosts list properties, promoters generate referral links to earn commissions, and travelers book through Stripe Checkout. Revenue model: 10% platform fee, 8% to promoters, 82% to hosts. Built with React + TypeScript frontend, Motoko backend on Internet Computer, Stripe payments, and Internet Identity authentication.",
+  "architectural_notes": [
+    "Frontend: React with TypeScript and Tailwind CSS",
+    "Backend: Motoko (Internet Computer)",
+    "Payments: Stripe Checkout integration for bookings",
+    "Authentication: Internet Identity with multiple providers",
+    "Revenue model: 10% platform fee, 8% promoter commission, 82% host payout",
+    "Automated payout distribution through Stripe",
+    "PWA features: Web app manifest, service worker for install prompt, full-screen mode",
+    "Social sharing integration for Instagram and Facebook (manual share, not API-based)",
+    "Marketing campaign: Founding 50 Hosts landing page for early adopter recruitment"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-host-dashboard-page-where-authenticated-hosts-can-view-all-their-listings-create-new-property-listings-with-images-descriptions-pricing-location-amenities-and-manage-existing-listings",
+      "title": "Create a host dashboard page where authenticated hosts can view all their listings, create new property listings with images, descriptions, pricing, location, amenities, and manage existing listings",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-promoter-dashboard-page-where-authenticated-promoters-can-generate-their-unique-referral-link-view-total-commissions-earned-and-see-a-list-of-bookings-made-through-their-referral-links",
+      "title": "Create a promoter dashboard page where authenticated promoters can generate their unique referral link, view total commissions earned, and see a list of bookings made through their referral links",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-listings-browse-page-where-travelers-can-view-all-available-properties-with-images-pricing-location-and-basic-details-and-click-through-to-a-detailed-listing-page",
+      "title": "Create a listings browse page where travelers can view all available properties with images, pricing, location, and basic details, and click through to a detailed listing page",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-listing-detail-page-that-displays-full-property-information-including-all-images-description-amenities-pricing-and-a-booking-form-where-travelers-select-check-in-check-out-dates-and-proceed-to-stripe-checkout",
+      "title": "Create a listing detail page that displays full property information including all images, description, amenities, pricing, and a booking form where travelers select check-in/check-out dates and proceed to Stripe Checkout",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-stripe-checkout-on-the-frontend-to-redirect-travelers-to-stripe-payment-page-when-booking-and-handle-successful-payment-redirects-back-to-a-booking-confirmation-page",
+      "title": "Integrate Stripe Checkout on the frontend to redirect travelers to Stripe payment page when booking, and handle successful payment redirects back to a booking confirmation page",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-internet-identity-authentication-allowing-users-to-sign-in-as-host-promoter-or-traveler-using-passkeys-google-apple-or-microsoft-accounts",
+      "title": "Implement Internet Identity authentication allowing users to sign in as host, promoter, or traveler using passkeys, Google, Apple, or Microsoft accounts",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-home-page-with-hero-section-explaining-stayspread-s-value-proposition-call-to-action-buttons-for-hosts-and-promoters-and-featured-property-listings",
+      "title": "Create a home page with hero section explaining StaySpread's value proposition, call-to-action buttons for hosts and promoters, and featured property listings",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-web-app-manifest-file-frontend-public-manifest-json-with-app-metadata-including-name-stayspread-short-name-description-affiliate-marketplace-for-short-term-rentals-theme-color-background-color-display-mode-standalone-for-full-screen-app-like-experience-start-url-and-icons-array-referencing-generated-logo-files-in-multiple-sizes-512x512-192x192-144x144-96x96-72x72-48x48",
+      "title": "Create a web app manifest file (frontend/public/manifest.json) with app metadata including name 'StaySpread', short_name, description 'Affiliate marketplace for short-term rentals', theme_color, background_color, display mode 'standalone' for full-screen app-like experience, start_url, and icons array referencing generated logo files in multiple sizes (512x512, 192x192, 144x144, 96x96, 72x72, 48x48)",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-service-worker-file-frontend-public-sw-js-that-enables-install-prompt-functionality-without-implementing-offline-caching-registering-the-service-worker-in-frontend-index-html-or-frontend-src-main-tsx",
+      "title": "Create a service worker file (frontend/public/sw.js) that enables install prompt functionality without implementing offline caching, registering the service worker in frontend/index.html or frontend/src/main.tsx",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-install-button-component-to-the-header-that-detects-if-the-app-is-installable-using-the-beforeinstallprompt-event-displays-an-install-app-or-add-to-home-screen-button-when-installable-triggers-the-native-install-prompt-when-clicked-and-hides-after-successful-installation",
+      "title": "Add an install button component to the Header that detects if the app is installable using the beforeinstallprompt event, displays an 'Install App' or 'Add to Home Screen' button when installable, triggers the native install prompt when clicked, and hides after successful installation",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-index-html-to-include-meta-tags-for-pwa-theme-color-apple-mobile-web-app-capable-apple-mobile-web-app-status-bar-style-and-link-tag-referencing-the-manifest-json-file",
+      "title": "Update frontend/index.html to include meta tags for PWA theme-color, apple-mobile-web-app-capable, apple-mobile-web-app-status-bar-style, and link tag referencing the manifest.json file",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-social-sharing-buttons-to-the-listingdetail-page-that-open-pre-filled-instagram-and-facebook-share-dialogs-with-the-listing-name-property-description-excerpt-listing-url-including-any-referral-parameter-from-the-current-url-and-property-image",
+      "title": "Add social sharing buttons to the ListingDetail page that open pre-filled Instagram and Facebook share dialogs with the listing name, property description excerpt, listing URL including any referral parameter from the current URL, and property image",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-founding-50-hosts-landing-page-route-frontend-src-pages-founding50-tsx-that-highlights-the-benefits-for-early-adopter-hosts-including-zero-upfront-costs-commission-only-model-82-payout-to-hosts-no-listing-fees-platform-support-and-includes-a-call-to-action-button-that-navigates-authenticated-users-to-the-host-dashboard-or-prompts-non-authenticated-users-to-sign-in",
+      "title": "Create a new 'Founding 50 Hosts' landing page route (frontend/src/pages/Founding50.tsx) that highlights the benefits for early-adopter hosts including zero upfront costs, commission-only model (82% payout to hosts), no listing fees, platform support, and includes a call-to-action button that navigates authenticated users to the host dashboard or prompts non-authenticated users to sign in",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-founding-50-landing-page-route-to-the-router-configuration-in-frontend-src-app-tsx-with-path-founding-50-hosts",
+      "title": "Add the Founding 50 landing page route to the router configuration in frontend/src/App.tsx with path '/founding-50-hosts'",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-promoterdashboard-page-by-adding-a-prominent-copy-referral-link-button-with-one-click-copy-to-clipboard-functionality-that-shows-a-success-toast-notification-when-copied-and-display-the-full-referral-url-format-using-the-current-domain-and-the-promoter-s-referral-code",
+      "title": "Enhance the PromoterDashboard page by adding a prominent 'Copy Referral Link' button with one-click copy-to-clipboard functionality that shows a success toast notification when copied, and display the full referral URL format using the current domain and the promoter's referral code",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-social-share-buttons-instagram-and-facebook-to-the-promoterdashboard-that-allow-promoters-to-share-their-unique-referral-link-with-pre-filled-content-including-a-promotional-message-about-earning-through-stayspread-and-their-referral-url",
+      "title": "Add social share buttons (Instagram and Facebook) to the PromoterDashboard that allow promoters to share their unique referral link with pre-filled content including a promotional message about earning through StaySpread and their referral URL",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-visual-tracking-section-to-the-promoterdashboard-that-displays-key-metrics-including-total-clicks-on-their-referral-link-if-tracked-total-bookings-made-through-their-referral-code-total-commissions-earned-and-number-of-unique-referrals-using-cards-or-a-dashboard-style-layout-with-icons",
+      "title": "Add a visual tracking section to the PromoterDashboard that displays key metrics including total clicks on their referral link (if tracked), total bookings made through their referral code, total commissions earned, and number of unique referrals, using cards or a dashboard-style layout with icons",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deploy-the-stayspread-application-to-the-internet-computer-network-including-all-previously-generated-features-host-dashboard-promoter-dashboard-with-tracking-metrics-and-social-sharing-listings-browse-and-detail-pages-stripe-checkout-integration-internet-identity-authentication-pwa-capabilities-manifest-service-worker-install-button-founding-50-hosts-landing-page-and-social-sharing-buttons-on-listing-and-promoter-dashboard-pages",
+      "title": "Deploy the StaySpread application to the Internet Computer network, including all previously generated features: host dashboard, promoter dashboard with tracking metrics and social sharing, listings browse and detail pages, Stripe Checkout integration, Internet Identity authentication, PWA capabilities (manifest, service worker, install button), Founding 50 Hosts landing page, and social sharing buttons on listing and promoter dashboard pages.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Host dashboard to create and manage property listings with images, descriptions, and pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Promoter dashboard to generate unique referral links and track commissions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Booking flow for travelers to browse listings and book through Stripe Checkout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Commission tracking system with automated splits: 10% platform fee, 8% to promoters, 82% to hosts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Internet Identity authentication (passkeys, Google, Apple, Microsoft)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a backend data model for property listings that stores property name, description, nightly price, location, host identifier, images (array of URLs), amenities, and availability status",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create a backend data model for promoters that stores promoter identifier, unique referral code, total commissions earned, and booking history",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Create a backend data model for bookings that stores booking ID, listing ID, traveler identifier, promoter referral code (optional), check-in date, check-out date, total price, platform fee (10%), promoter commission (8%), host payout (82%), payment status, and Stripe payment intent ID",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement backend functions for hosts to create, update, and delete their property listings",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Implement backend functions for promoters to generate unique referral links and retrieve their commission earnings and booking history",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Implement backend function to create a booking with commission calculation that splits payment into platform fee (10%), promoter commission (8% if referral code provided), and host payout (82%)",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Integrate Stripe Checkout on the backend to process booking payments and store the Stripe payment intent ID with each booking",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add PWA capabilities: install prompt, full-screen mode, service worker, and custom splash screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Generate StaySpread logo/icon in multiple sizes for PWA app icons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add social sharing buttons (Instagram/Facebook) on listing pages for promoters and travelers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Create 'Founding 50 Hosts' landing page highlighting zero-risk commission-only model for early adopters",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Enhance promoter dashboard with easy copy-to-clipboard referral links, click/booking tracking visualization, and social share buttons",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "StaySpread",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
